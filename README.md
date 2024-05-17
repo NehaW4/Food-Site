@@ -1,4 +1,5 @@
-***#Food Web page using HTMl and CSS only***
+**#Food Web page using HTMl and CSS only :**
+
 I built a food website using HTML and CSS, focusing on simplicity and usability. With HTML, I organized the content, while CSS helped me style it for a clean and inviting look. I chose colors and fonts that match the restaurant's vibe, and made sure the site works well on different devices. By combining HTML's structure with CSS's styling, I created a straightforward and appealing website that showcases the restaurant's offerings effectively.
 
 **Output :**
