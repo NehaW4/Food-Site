@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Food</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-Dv4TH1tjCQh14Kjz3PIOgcib6f1t+gWynJdaVZpln8mnagFYTtwP3WAVvp5MGa1G" crossorigin="anonymous">
+    <style>
+        /* Add your custom CSS styles here */
+        /* General Styles */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #f44336;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: hsl(0, 0%, 99%);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: end;
+            margin: 15px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            
+        }
+
+        nav a {
+            color: rgb(1, 1, 2);
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            font-size: 18px;
+            display: inline-block;
+            
+        }
+
+        nav a:hover {
+           color: rgb(29, 60, 213);
+        }
+         nav h5{
+            text-align: left;
+           
+         }
+
+         nav img {
+            max-height: 50px; 
+            vertical-align: middle;
+            float: left;
+        }
+
+
+        .logo img {
+            width: 100px;
+            height: auto;
+        }
+
+        /* Main Section Styles */
+        section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 80px;
+}
+
+section .main .main_text h1{
+    color: #000;
+    font-size: 75px;
+    position: relative;
+    top: -25px;
+    left: 5%;
+}
+
+section .main .main_text h1 span{
+    color: #facc22;
+    font-family: polo;
+}
+
+section .main .main_text p{
+    color: #000;
+    width: 650px;
+    position: relative;
+    top: 20px;
+    left: 5%;
+    line-height: 23px;
+    text-align: justify;
+}
+
+section .main .main_text .btn i{
+    margin-right: 8px;
+}
+
+section .main .main_text .btn{
+    color: #000;
+    text-decoration: none;
+    border: 2px solid #facc22;
+    padding: 10px 20px;
+    position: relative;
+    top: 100px;
+    left: 5%;
+    transition: 0.3s;
+}
+
+section .main .main_text .btn:hover{
+    color: #fff;
+}
+
+section .main .main_text .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #facc22;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+section .main .main_text .btn:hover::before{
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+section .main .main_image img{
+    width: 650px;
+    animation: animate 5s linear infinite;
+}
+
+
+
+
+        /* About Section Styles */
+        
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 10px 0 0 0;
+    background-image: url(image/about_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_main .about_image img{
+    width: 750px;
+}
+
+.about .about_main .about_text h1{
+    font-size: 45px;
+    position: relative;
+    bottom: 40px;
+}
+
+.about .about_main .about_text h1 span{
+    color: #facc22;
+    margin-right: 15px;
+}
+
+.about .about_main .about_text h3{
+    position: relative;
+    bottom: 10px;
+    font-size: 25px;
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    line-height: 23px;
+    margin-top: 20px;
+}
+
+.about .about_main .about_text .about_services{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about .about_main .about_text .about_services .s_1{
+    display: flex;
+    align-items: center;
+    width: 180px;
+    background: #ececec;
+    padding: 10px;
+    border: 2px solid #facc22;
+    cursor: pointer;
+}
+
+.about .about_main .about_text .about_services .s_1 i{
+    color: #000;
+    margin: 5px 10px 5px 5px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_services .s_1:hover i{
+    color: #facc22;
+}
+
+.about .about_main .about_text .about_services .s_1 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+.about .about_main .about_text .about_btn i{
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+.about .about_main .about_text .about_btn{
+    position: relative;
+    top: 35px;
+    padding: 10px 20px;
+    border: 2px solid #facc22;
+    text-decoration: none;
+    color: #000;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_btn:hover{
+    color: #fff;
+}
+
+.about .about_main .about_text .about_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background: #facc22;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_btn:hover::before{
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+
+        /* Menu Section Styles */
+        .menu {
+            background-color: #f0eef1;
+            padding: 60px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .menu h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .menu_box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .menu_card {
+            flex: 1;
+            max-width: 250px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .menu_card:hover {
+            transform: translateY(-10px);
+        }
+
+        .menu_img img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .menu_text h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .menu_text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .menu_icon {
+            margin-bottom: 20px;
+        }
+
+        .menu_icon i {
+            color: #0e0b0b;
+            font-size: 24px;
+            margin-right: 5px;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .menu_btn {
+            background-color: #000000;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .menu_btn:hover {
+            background-color: #2534d7;
+        }
+
+
+        /* Gallery Section Styles */
+        .gallery {
+            background-color: #000000;
+            padding: 60px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .gallery h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .gallery_box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .gallery_image {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .gallery_image img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Offer Section Styles */
+        .offer {
+            background-color: #f1f4f6;
+            padding: 60px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .offer h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        .offer_box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .offer_card_1,
+        .offer_card_2 {
+            flex: 1;
+            margin: 0 10px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .offer_card_1:hover,
+        .offer_card_2:hover {
+            transform: translateY(-10px);
+        }
+
+        .offer_img img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .offer_tag h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .offer_tag p {
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .offer_btn {
+            background-color: #000000;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .offer_btn:hover {
+            background-color: #e53935;
+        }
+
+        /* Team Section Styles */
+        .team {
+            background-color: #000000;
+            padding: 60px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .team h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .team_box {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .team_card {
+            flex: 1;
+            max-width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .team_card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team_img img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .team_tag h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .team_tag p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Blog Section Styles */
+        .blog {
+            background-color: #ffffff;
+            padding: 60px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        .blog h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #030303;
+        }
+
+        .blog_box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .blog_card {
+            flex: 1;
+            max-width: 300px;
+            margin: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .blog_card:hover {
+            transform: translateY(-10px);
+        }
+
+        .blog_img img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .blog_tag h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .blog_tag p {
+            font-size: 15px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .view_and_like {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .view_and_like p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .like i {
+            color: #f44336;
+            font-size: 24px;
+        }
+
+        /* Order Section Styles */
+        .order {
+            background-color: #000000;
+            padding: 60px 0;
+            text-align: center;
+            color: #faf2f2;
+        }
+
+        .order h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .order_main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .order_img img {
+            width: 30%;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+        .order_form {
+            max-width: 50%;
+        }
+
+        .order_list {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .order_list p {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 5px;
+        }
+
+        .order_list input,
+        .order_list textarea {
+            width: calc(100% - 10px);
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .order_btn {
+            background-color: #f44336;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 18px;
+        }
+
+        .order_btn:hover {
+            background-color: #e53935;
+        }
+
+        .background-section {
+    background-image: url('C:\Users\NEHA\Desktop\Html & Css\food\image\menu-bg.png'); /* Replace 'path_to_your_image.jpg' with the path to your image */
+    background-size: cover; /* This property ensures that the background image covers the entire section */
+    background-position: center; /* This property centers the background image */
+    height: 400px; /* Adjust the height of the section as needed */
+    /* Add any other styling you want for your section */
+  }
+
+        /* Footer Section Styles */
+        footer {
+            background-color: #ffffff;
+            padding: 40px 0;
+            text-align: center;
+            color: #000000;
+        }
+
+        .footer_main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer_tag {
+            flex: 1;
+            max-width: 200px;
+            margin: 0 10px;
+        }
+
+        .footer_tag h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer_tag p {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .end {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        .end span {
+            display: block;
+            margin-top: 5px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Main Section -->
+    <section id="Home">
+ 	 <nav>
+       <img src="image/logo2.png">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        
+    	</nav>
+        <div class="main">
+ 	<div class="main_image">
+                <img src="image/ChickenBiryani.png">
+            </div>
+            <div class="main_text">
+
+                <h1>Welcome To Our<br><span>Indian</span><br> Restaurant.</h1>
+
+               
+
+            </div>
+
+
+        </div>
+    </section>
+
+ 
+    <!--About-->
+
+    <div class="about">
+
+        <div class="about_main">
+
+            <div class="about_image">
+                <img src="image/about2.png">
+            </div>
+
+            <div class="about_text">
+
+                <h1><span>About</span>Us</h1>
+                <h3>why food choose us?</h3>
+                <p>
+                    In this journey called life, we encounter various paths and meet different people, each leaving a mark on our story. Sometimes the road is smooth, and sometimes it gets a bit bumpy, but those bumps often teach us important lessons. As we travel, we discover more about ourselves—our strengths, passions, and what truly matters. Cherish the friendships made along the way, as they add warmth and companionship to our adventure. Embrace the journey with an open heart, for it's not just about reaching a destination, but relishing the experiences that shape who we are.</p>
+
+                <div class="about_services">
+
+                    
+
+                </div>
+
+                <a href="#" class="about_btn">
+                    <i class="fa-solid fa-burger"></i>Order Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <!-- Menu Section -->
+    <section id="Menu">
+        <div class="menu">
+            <h1>Our <span>Menu</span></h1>
+            <div class="menu_box">
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="image/1.png" alt="Menu Image">
+                    </div>
+                    <div class="menu_text">
+                        <h2>Fresh Chicken Veggies</h2>
+                        <p>Embrace the journey with an open heart, for it's not just about reaching a destination.</p>
+                        
+                        <div class="menu_icon">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <p class="price">₹100</p>
+                        </div>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="image/2.png" alt="Menu Image">
+                    </div>
+                    <div class="menu_text">
+                        <h2>Grilled Chicken</h2>
+                        <p>Embrace the journey with an open heart, for it's not just about reaching a destination.</p>
+                 
+                        <div class="menu_icon">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <p class="price">₹150</p>
+                        </div>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+                <div class="menu_card">
+                    <div class="menu_img">
+                        <img src="image/5.png" alt="Menu Image">
+                    </div>
+                    <div class="menu_text">
+                        <h2>Sandwich</h2>
+                        <p>Embrace the journey with an open heart, for it's not just about reaching a destination.</p>
+                        
+                        <div class="menu_icon">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <p class="price">₹80</p>
+                        </div>
+                        <a href="#" class="menu_btn">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <h1>Our <span>Gallery</span></h1>
+        <div class="gallery_box">
+            <div class="gallery_image">
+                <img src="image/g1.jpg" alt="Gallery Image">
+            </div>
+            <div class="gallery_image">
+                <img src="image/g2.png" alt="Gallery Image">
+            </div>
+            <div class="gallery_image">
+                <img src="image/g3.jpg" alt="Gallery Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Offer Section -->
+    <div class="offer">
+        <h1>Today's <span>Special</span></h1>
+        <div class="offer_box">
+            <div class="offer_card_1">
+                <div class="offer_img">
+                    <img src="image/offer_1.jpg" alt="Offer Image">
+                </div>
+                <div class="offer_tag">
+                    <h2>Combo Offer</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Saepe, tempore quidem. Ab voluptatibus repellat, magni 
+                        aliquid deserunt.
+                    </p>
+                    <a href="#" class="offer_btn">Order Now</a>
+                </div>
+            </div>
+            <div class="offer_card_2">
+                <div class="offer_img">
+                    <img src="image/offer_2.png" alt="Offer Image">
+                </div>
+                <div class="offer_tag">
+                    <h2>Family Pack</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Saepe, tempore quidem. Ab voluptatibus repellat, magni 
+                        aliquid deserunt.
+                    </p>
+                    <a href="#" class="offer_btn">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <section id="Team">
+        <div class="team">
+            <h1>Our <span>Team</span></h1>
+            <div class="team_box">
+                <div class="team_card">
+                    <div class="team_img">
+                        <img src="image/c4.jpg" alt="Team Image">
+                    </div>
+                    <div class="team_tag">
+                        <h2>Ranveer Brar</h2>
+                        <p>Chef</p>
+                    </div>
+                </div>
+                <div class="team_card">
+                    <div class="team_img">
+                        <img src="image/c2.jpg" alt="Team Image">
+                    </div>
+                    <div class="team_tag">
+                        <h2>Kunal Kapoor</h2>
+                        <p>Co-Che</p>
+                    </div>
+                </div>
+                <div class="team_card">
+                    <div class="team_img">
+                        <img src="image/c3.jpg" alt="Team Image">
+                    </div>
+                    <div class="team_tag">
+                        <h2>Manik Grover</h2>
+                        <p>Sue-Chef</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="Blog">
+        <div class="blog">
+            <h1>Our <span>Blog</span></h1>
+            <div class="blog_box">
+                <div class="blog_card">
+                    <div class="blog_img">
+                        <img src="image/blog1.jpg" alt="Blog Image">
+                    </div>
+                    <div class="blog_tag">
+                        <h3> Energy Drink which you can make at home.</h3>
+                        <p>
+                           
+                            Create a homemade energy drink by mixing water, honey, and a splash of citrus juice for a refreshing and natural boost. Add a pinch of salt for electrolytes, and you have a simple, revitalizing beverage.
+                        </p>
+                        <div class="view_and_like">
+                            <p>Views: 100</p>
+                            <div class="like">
+                                <i class="fa-regular fa-heart"></i>
+                                <span>50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_card">
+                    <div class="blog_img">
+                        <img src="image/blog2.jpg" alt="Blog Image">
+                    </div>
+                    <div class="blog_tag">
+                        <h3>Fresh Veggie and rice combo for dinner.</h3>
+                        <p>
+                            
+For a wholesome dinner, try a fresh veggie and rice combo. Sauté vibrant vegetables like bell peppers, broccoli, and carrots, then serve over a bed of fluffy rice for a nutritious and delicious meal.
+                        </p>
+                        <div class="view_and_like">
+                            <p>Views: 150</p>
+                            <div class="like">
+                                <i class="fa-regular fa-heart"></i>
+                                <span>75</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="blog_card">
+                    <div class="blog_img">
+                        <img src="image/blog3.jpg" alt="Blog Image">
+                    </div>
+                    <div class="blog_tag">
+                        <h3>Chicken burger with double nuggets</h3>
+                        <p>
+                            
+Savor our delightful chicken burger, featuring double the delight with crispy nuggets. Indulge in this harmonious blend of juicy goodness and crunchy perfection. Elevate your meal with this satisfying combo.
+
+
+                        </p>
+                        <div class="view_and_like">
+                            <p>Views: 120</p>
+                            <div class="like">
+                                <i class="fa-regular fa-heart"></i>
+                                <span>60</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <div class="order">
+        <h1>Place Your <span>Order</span></h1>
+        <div class="order_main">
+           
+            <form action="#" class="order_form">
+                <div class="order_list">
+                    <p>Your Name:</p>
+                    <input type="text" placeholder="Enter Your Name" required>
+                </div>
+                <div class="order_list">
+                    <p>Your Email:</p>
+                    <input type="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="order_list">
+                    <p>Your Phone:</p>
+                    <input type="tel" placeholder="Enter Your Phone Number" required>
+                </div>
+                <div class="order_list">
+                    <p>Address:</p>
+                    <textarea name="address" id="address" cols="30" rows="5" placeholder="Enter Your Address" required></textarea>
+                </div>
+                <button type="submit" class="order_btn">Place Order</button>
+            </form>
+        
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer_main">
+            <div class="footer_tag">
+                <h2>About Us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Voluptas fugit pariatur corporis, blanditiis numquam 
+                    molestias.
+                </p>
+            </div>
+            <div class="footer_tag">
+                <h2>Menu</h2>
+                <p>Burger</p>
+                <p>Pizza</p>
+                <p>Sandwich</p>
+            </div>
+            <div class="footer_tag">
+                <h2>Location</h2>
+                <p>Shaniwar peth, Pune</p>
+                <p>India, 403197</p>
+            </div>
+        </div>
+        <div class="end">
+            &copy; 2024 Delicious Food. All Rights Reserved. <span>Neha Wakhare</span>
+        </div>
+    </footer>
+</body>
+</html>
